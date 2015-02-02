@@ -1,0 +1,69 @@
+<div class="wall wall-margin-top">
+	<div class="container-fluid wall-margin-bottom">
+
+		<!-- Person's photo, name and how long ago did that person posted the status -->
+		<div class="row" style="height:40px;">
+			<div class="inline-block post-photo-container">
+				<img src="{postPerson.photo}" class="post-photo">
+			</div>
+			<ul class="inline-block post-person-name">
+				<li>
+					<strong>
+						<a href="#">
+							<span>{postPerson.name}</span>
+						</a>
+					</strong>
+				</li>
+				<li>
+					<span class="post-person-time-ago">
+						2 mins ago
+					</span>
+				</li>
+			</ul>
+		</div>
+		<!-- /Person's photo, name and how long ago did that person posted the status -->
+
+		<!-- If there is a picture in the post -->
+		{?photo}
+		<div class="row">
+			<div class="col-xs-12 post-content-photo-container">
+				<img src="{photo}" class="img-responsive">
+			</div>
+		</div>
+		{/photo}
+		<!-- /If there is a picture in the post -->
+
+		<!-- The status of the post -->
+		<div class="row">
+			<div class="col-xs-12 post-content-status">
+				{comment}
+			</div>
+		</div>
+		<!-- /The status of the post -->
+
+		<!-- Like, comment and share options -->
+		<div class="row">
+			<div class="col-xs-12 post-like-comment-share">
+				<a href="#">Like</a> · 
+				<a href="#">Comment</a> · 
+				<a href="#">Share</a>
+			</div>
+		</div>
+		<!-- /Like, comment and share options -->
+
+		<!-- Post a comment for the status -->
+		<div class="row post-comment">
+			<div class="post-background">
+				<div class="inline-block post-photo-container">
+					<img src="{commentPerson.photo}" class="inline-block post-content-photo">
+				</div>
+				<div class="inline-block comment-input-width">
+					<form class="form inline-block" role="form">
+						<input class="form-control input-sm" type="text" placeholder="Share a comment...">
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- /Post a comment for the status -->
+	</div>
+</div>

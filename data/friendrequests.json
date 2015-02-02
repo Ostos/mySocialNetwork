@@ -1,0 +1,22 @@
+[
+	{
+		"name":"Gerardo Ostos",
+		"mutualFriends":120,
+		"photo":"/data/img/gerardo.jpg"
+	},
+	{
+		"name":"Benjamin Hurtado",
+		"mutualFriends":80,
+		"photo":"/data/img/benjamin.jpg"
+	},
+	{
+		"name":"Josue Davila",
+		"mutualFriends":43,
+		"photo":"/data/img/josue.jpg"
+	},
+	{
+		"name":"Pablo Garcia",
+		"mutualFriends":87,
+		"photo":"/data/img/pablo.jpg"
+	}
+]
