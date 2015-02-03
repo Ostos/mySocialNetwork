@@ -13,6 +13,10 @@
  	float: right;
  }
 
+ .float-left{
+ 	float: left;
+ }
+
  .sponsor-text{
  	color: #9197a3;
  }
@@ -250,7 +254,7 @@
  }
 
  .friend-request-block img{
- 	height:50px;
+ 	height:40px;
  }
 
  .friend-request-block .mutual-friends-block{
