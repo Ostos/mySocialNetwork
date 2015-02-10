@@ -428,6 +428,10 @@
  	.left-container-font-size{
  		font-size: .8em;
  	}
+
+ 	#bs-example-navbar-collapse-1{
+ 		display:flex !important;
+ 	}
  }
 
  /*For MEDIUM screens*/
