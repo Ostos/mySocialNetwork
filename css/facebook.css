@@ -432,6 +432,21 @@
  	#bs-example-navbar-collapse-1{
  		display:flex !important;
  	}
+
+ 	nav .container{
+ 		display: flex;
+ 	}
+
+ 	nav .container .navbar-header{
+ 		flex:1;
+ 	}
+
+ 	#bs-example-navbar-collapse-1 .form-group{
+ 		flex:1;
+ 		display:flex; 
+ 		margin-top:10px; 
+ 		margin-bottom:10px;
+ 	}
  }
 
  /*For MEDIUM screens*/
@@ -444,6 +459,10 @@
  	.left-container-font-size{
  		font-size: 0.8em;
  		padding-left: 1em;
+ 	}
+
+ 	#bs-example-navbar-collapse-1 .form-group{
+ 		flex:2;
  	}
  }
 
