@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html ng-app="facebookMdl">
+<head>
+	<title>Facebook</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/facebook.css">
+</head>
+<body ng-controller="facebookCtrl" style="position:relative;">
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/profile"><img src="img/fbsprite.png"></a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="flex:30;">
+				<!-- <form class="navbar-form navbar-left" role="form"> -->
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="search" placeholder="Search">
+					</div>
+				<!-- </form> -->
+				<ul class="nav navbar-nav navbar-right" style="text-align:center; order:1;">
+					<li><a class="" href="/profile">Gerardo</a></li>
+					<li><a class="" href="/newsFeed">Home</a></li>
+					<li class="dropdown">
+						<a class="clip-container hidden-xs" href="#" data-toggle="dropdown">
+							<img src="img/fbsprite2.png" id="friends-notifications">
+						</a>
+						<a href="#" class="visible-xs" data-toggle="dropdown">Friend Requests</a>
+						<ul class="dropdown-menu dropdown-width" role="menu">
+							<li class="dropdown-header">
+								<div class="container-fluid">
+									<div class="row">
+										<div class="float-left">
+											<div class="inline-block header">
+												<span class="title">Friend Requests</span>
+											</div>
+										</div>
+										<div class="float-right">
+											<div class="inline-block header">
+												<span>
+													<a href="#">
+														Find Friends 
+													</a>
+												</span>
+												<span>&nbsp;*&nbsp;</span>
+												<span>
+													<a href="#">
+														Settings
+													</a> 
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="divider"></li>
+							<li class="friend-request-block" ng-repeat-start="friend in friendRequests">
+								<div class="container-fluid" style="text-align:left;">
+									<div class="row">
+										<div class="col-xs-2">
+											<img class="img-responsive" ng-src="{{friend.photo}}">
+										</div>
+										<div class="col-xs-5 remove-padding" style="">
+											<div class="mutual-friends-block">
+												<ul>
+													<li class="name" ng-bind="friend.name"></li>
+													<li class="mutual-friends"><span ng-bind="friend.mutualFriends"></span> mutual friends</li>
+												</ul>
+											</div>
+										</div>
+										<div class="col-xs-5">
+											<div class="container-fluid">
+												<div class="row">
+													<div class="col-xs-6">
+														<button class="btn btn-primary btn-xs btn-confirm-friend-request">Confirm</button>
+													</div>
+													<div class="col-xs-6">
+														<button class="btn btn-default btn-xs btn-confirm-friend-request">Not Now</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="divider" ng-repeat-end></li>
+							<li class="friend-request-block">
+								<div class="friend-request-block-footer">
+									<span>See All</span>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a class="clip-container hidden-xs" href="#"><img src="img/fbsprite2.png" id="inbox-notifications"></a>
+						<a href="#" class="visible-xs">Inbox</a>
+					</li>
+					<li>
+						<a class="clip-container hidden-xs" href="#"><img src="img/fbsprite2.png" id="general-notifications"></a>
+						<a href="#" class="visible-xs">Notifications</a>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+
+	<section ng-view></section>
+
+	<script type="text/javascript" src="lib/jquery.min.js"></script>
+	<script type="text/javascript" src="lib/angular/angular.min.js"></script>
+	<script type="text/javascript" src="lib/angular/angular-route.min.js"></script>
+	<script type="text/javascript" src="lib/angular/angular-resource.min.js"></script>
+	<script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+	<script src="lib/dust-full-0.3.0.min.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
+	<script type="text/javascript" src="js/facebook.js"></script>
+	<script type="text/javascript" src="js/services.js"></script>
+	<script type="text/javascript" src="js/config.js"></script>
+	<script type="text/javascript" src="js/controllers.js"></script>
+	<script type="text/javascript" src="js/run.js"></script>
+
+</body>
+</html>
