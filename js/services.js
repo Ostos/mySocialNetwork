@@ -3,7 +3,7 @@ facebook
 .factory('AuthenticationService', function() {
 	var auth = {
 		isLogged: false
-	}
+	};
 	return auth;
 })
 // Service to log in to facebook
@@ -28,4 +28,4 @@ facebook
             return response || $q.when(response);
         }
     };
-})
+});

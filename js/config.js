@@ -2,7 +2,7 @@ facebook
 .config(["$locationProvider","$routeProvider","$httpProvider", function($locationProvider,$routeProvider,$httpProvider){
 
 	// Add to the interceptors the TokenInterceptor service
-	$httpProvider.interceptors.push('TokenInterceptor');
+	$httpProvider.interceptors.push("TokenInterceptor");
 
 	// Delete the default hash from the url
 	$locationProvider.html5Mode(true);
@@ -24,4 +24,4 @@ facebook
 		access:{requiredLogin:false}
 	})
 	.otherwise({redirectTo:"/login"});
-}])
+}]);

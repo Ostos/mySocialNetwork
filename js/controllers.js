@@ -44,7 +44,7 @@ facebook
 	$scope.title = "Profile";
 
 }])
-.controller("loginCtrl",['$scope', '$location', '$window', 'UserService', 'AuthenticationService', function($scope, $location, $window, UserService, AuthenticationService) {
+.controller('loginCtrl',['$scope', '$location', '$window', 'UserService', 'AuthenticationService', function($scope, $location, $window, UserService, AuthenticationService) {
 	$scope.username = "";
 	$scope.password = "";
 
@@ -64,4 +64,4 @@ facebook
 	 		});
 	 	}
 	 };
-}])
+}]);
